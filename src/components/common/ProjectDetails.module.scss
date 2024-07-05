@@ -1,0 +1,72 @@
+@import "../../style/index.scss";
+
+.wrap {
+	position: relative;
+	margin-bottom: 36px;
+	&:not(:last-child) {
+		margin-bottom: 90px;
+	}
+
+	@include mobile-screen {
+		display: none;
+	}
+}
+
+.title {
+	@include font(400, 24px);
+	height: 29px;
+	@include flex-container(row, flex-start, center);
+	margin-bottom: 12px;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		background-color: #222222;
+		border-radius: 50%;
+		margin-right: 11px;
+	}
+}
+
+.paragraph {
+	position: relative;
+	left: 36px;
+
+	@include flex-container(column);
+	gap: 20.75px;
+
+	li {
+		@include font(400, 16px, 19px);
+		color: $sub-text-color;
+
+		& > img {
+			margin-left: 34px;
+
+			@include tablet-screen {
+				display: none;
+			}
+
+			@include mobile-screen {
+				display: none;
+			}
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		left: -15px;
+		top: 0;
+		bottom: -53px;
+		width: 2px;
+		background-color: $border-color;
+
+		@include tablet-screen {
+			bottom: -23px;
+		}
+
+		@include mobile-screen {
+			bottom: -23px;
+		}
+	}
+}

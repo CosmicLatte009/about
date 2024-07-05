@@ -1,0 +1,140 @@
+@import "../../style/index.scss";
+
+.section {
+	margin-top: 9.6538rem;
+	@include flex-container(column, center, center);
+}
+
+.main-wrap {
+	margin-top: 5.875rem;
+	@include flex-container(row, flex-start, center, true);
+	gap: 5.8275rem;
+
+	@include tablet-screen {
+		@include flex-container(column, center, center, true);
+	}
+	@include mobile-screen {
+		@include flex-container(column, center, center, true);
+	}
+}
+
+.left-wrap {
+	@include flex-container(column, center, center);
+	gap: 2rem;
+}
+
+.right-wrap {
+	@include flex-container(column, center, flex-start);
+	gap: 7.4669rem;
+
+	@include tablet-screen {
+		text-align: center;
+		gap: 3rem;
+	}
+
+	@include mobile-screen {
+		text-align: center;
+		gap: 3rem;
+	}
+}
+
+.about-name {
+	@include font(400, 32px);
+
+	strong {
+		@include font(700, 32px);
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 384.5px;
+			height: 24.38px;
+			background-color: $light-color;
+			left: 11.94px;
+			top: 25.81px;
+		}
+	}
+	p:first-of-type {
+		margin-bottom: 2.375rem;
+	}
+
+	@include tablet-screen {
+		@include font(400, 24px);
+
+		strong {
+			@include font(700, 24px);
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 280.5px;
+				height: 20.38px;
+				background-color: $light-color;
+				left: 11.94px;
+				top: 20.81px;
+			}
+		}
+	}
+
+	@include mobile-screen {
+		@include font(400, 24px);
+
+		strong {
+			@include font(700, 24px);
+			position: relative;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+.about-advantages {
+	@include font(400, 24px, 29px);
+	strong {
+		@include font(700, 24px);
+	}
+
+	@include tablet-screen {
+		@include font(400, 18px);
+		strong {
+			@include font(700, 18px);
+		}
+	}
+
+	@include mobile-screen {
+		@include font(400, 18px);
+		strong {
+			@include font(700, 18px);
+		}
+	}
+}
+
+.advantages-list {
+	@include flex-container(column);
+	gap: 1.8962rem;
+	margin: 2.5075rem 0 0 3.3506rem;
+
+	li {
+		@include flex-container(row, felx-start, center);
+		gap: 1.0875rem;
+		color: $sub-text-color;
+		white-space: nowrap;
+	}
+
+	@include tablet-screen {
+		gap: 0.625rem;
+		margin: 1.25rem 0 0 0.625rem;
+		@include font(400, 18px);
+		strong {
+			@include font(700, 18px);
+		}
+	}
+
+	@include mobile-screen {
+		display: none;
+	}
+}

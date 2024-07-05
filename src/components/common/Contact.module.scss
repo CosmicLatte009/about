@@ -1,0 +1,30 @@
+@import "../../style/index.scss";
+
+.wrap {
+	text-align: center;
+	strong {
+		@include font(600, 24px, 29px);
+		color: $sub-text-color;
+	}
+}
+
+.contact-info {
+	margin: 1.8462rem 0 2.6563rem;
+	p {
+		@include font(400, 18px, 21px);
+		span {
+			@include font(700, 18px, 21px);
+			color: $main-color;
+			margin-right: 9.84px;
+		}
+	}
+
+	p:first-of-type {
+		margin-bottom: 20px;
+	}
+}
+
+.links-wrap {
+	@include flex-container(row, center, center, true);
+	gap: 29.53px;
+}

@@ -1,0 +1,62 @@
+@import "../../style/index.scss";
+
+.wrap {
+	width: 770px;
+	padding-bottom: 36.55px;
+	border-bottom: 1px solid $border-color;
+	@include flex-container(row, space-between, flex-start);
+
+	@include tablet-screen {
+		width: 340px;
+	}
+
+	@include mobile-screen {
+		width: 340px;
+	}
+}
+
+.right-wrap {
+	@include tablet-screen {
+		display: none;
+	}
+
+	@include mobile-screen {
+		display: none;
+	}
+}
+
+.title {
+	@include font(600, 24px, 29px);
+	@include flex-container(row, flex-start, center);
+	color: $sub-text-color;
+	margin-bottom: 17.54px;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: $sub-text-color;
+		border-radius: 50%;
+		margin-right: 16px;
+	}
+}
+
+.details {
+	margin-left: 24px;
+}
+
+.agency {
+	@include font(400, 18px, 24px);
+	color: $light-text-color;
+}
+
+.date {
+	@include font(500, 18px, 20px);
+	color: $light-text-color;
+}
+
+.link-group {
+	margin-top: 24.15px;
+	@include flex-container(row, flex-start, center);
+	gap: 25px;
+}

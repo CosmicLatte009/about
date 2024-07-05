@@ -1,0 +1,70 @@
+@import "../../style/index.scss";
+
+.section {
+	margin: 9.6538rem 0;
+	@include flex-container(column, center, center);
+}
+
+.experience-wrap {
+	margin-top: 154px;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 72.14px 92px;
+	@include tablet-screen {
+		@include flex-container(column, center, center);
+		gap: 2.5rem;
+	}
+
+	@include mobile-screen {
+		@include flex-container(column, center, center);
+
+		gap: 2.5rem;
+	}
+}
+
+.educate-wrap {
+	grid-column: 2;
+	@include flex-container(row, space-between, flex-start);
+
+	@include tablet-screen {
+		@include flex-container(column, center, flex-start);
+		gap: 5rem;
+		width: 340px;
+	}
+
+	@include mobile-screen {
+		@include flex-container(column, center, flex-start);
+		gap: 5rem;
+		width: 340px;
+	}
+}
+
+.educate-title {
+	@include font(600, 24px, 29px);
+	@include flex-container(row, flex-start, center);
+	color: $sub-text-color;
+	margin-bottom: 17.54px;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: $sub-text-color;
+		border-radius: 50%;
+		margin-right: 16px;
+	}
+}
+
+.educate-details {
+	margin-left: 24px;
+}
+
+.educate-agency {
+	@include font(400, 18px, 24px);
+	color: $light-text-color;
+}
+
+.educate-date {
+	@include font(500, 18px, 20px);
+	color: $light-text-color;
+}

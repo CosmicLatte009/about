@@ -1,0 +1,142 @@
+@import "../../style/index.scss";
+
+.section {
+	margin-top: 9.6538rem;
+	@include flex-container(column, center, center);
+}
+
+.main-wrap {
+	margin-top: 6.8856rem;
+	@include flex-container(column, center, stretch);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); // 2개의 컬럼으로 설정
+	row-gap: 80px;
+
+	.stack-card-wrap:nth-child(1) {
+		grid-column: 1 / span 2;
+		grid-row: 1;
+	}
+
+	.stack-card-wrap:nth-child(2) {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.stack-card-wrap:nth-child(3) {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.stack-card-wrap:nth-child(4) {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	.stack-card-wrap:nth-child(5) {
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	@include tablet-screen {
+		@include flex-container(column, center, center);
+
+		.stack-card-wrap {
+			width: 100%; // 모든 카드를 100% 너비로 설정
+			width: 700px; // 최대 너비 설정
+		}
+	}
+
+	@include mobile-screen {
+		@include flex-container(column, center, center);
+
+		.stack-card-wrap {
+			width: 100%; // 모든 카드를 100% 너비로 설정
+			width: 700px; // 최대 너비 설정
+		}
+	}
+}
+
+.stack-card-wrap {
+	@include flex-container(row, flex-start, center);
+	gap: 5.375rem;
+
+	&.react {
+		@include flex-container(row, center, center);
+	}
+
+	&.ga,
+	&.jira {
+		gap: 20px;
+	}
+
+	&.jira {
+		.stack-card {
+			width: 232.72px;
+		}
+	}
+
+	@include tablet-screen {
+		gap: 40px;
+
+		&.react {
+			@include flex-container(column, center, center);
+		}
+		@include flex-container(column, center, center);
+	}
+
+	@include mobile-screen {
+		gap: 40px;
+
+		&.react {
+			@include flex-container(column, center, center);
+		}
+		@include flex-container(column, center, center);
+	}
+}
+
+.stack-card {
+	@include flex-container(column, center, center);
+	min-width: 118px;
+	gap: 1.6875rem;
+
+	@include tablet-screen {
+		width: 232.72px;
+	}
+
+	@include mobile-screen {
+		width: 232.72px;
+	}
+}
+
+.stack-details {
+	@include flex-container(column, center);
+	gap: 0.9063rem;
+	white-space: nowrap;
+	li {
+		@include flex-container(row, flex-start, center);
+		gap: 0.625rem;
+	}
+	li p {
+		@include font(500, 18px, 35px);
+		display: inline;
+		color: $sub-text-color;
+	}
+
+	&.ga {
+		li {
+			@include flex-container(column, flex-start, flex-start);
+		}
+		li p {
+			line-height: 35px;
+		}
+	}
+
+	@include tablet-screen {
+		@include flex-container(column, center, center);
+	}
+
+	@include mobile-screen {
+		@include flex-container(column, center, center);
+		display: none;
+	}
+}

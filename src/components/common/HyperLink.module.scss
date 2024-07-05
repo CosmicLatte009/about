@@ -1,0 +1,7 @@
+@import "../../style/index.scss";
+
+.wrap {
+	@include flex-container(row, center, center, $inline: true);
+	@include font(500, 16px, 19px);
+	gap: 0.5rem;
+}
