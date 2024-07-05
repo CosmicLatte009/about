@@ -1,8 +1,18 @@
 @import "../../style/index.scss";
 
 .section {
-	margin: 9.6538rem 0;
+	margin: 17.5rem 0 15rem;
 	@include flex-container(column, center, center);
+
+	h2 {
+		@include mobile-screen {
+			text-align: center;
+		}
+	}
+
+	@include mobile-screen {
+		margin: 15rem 0;
+	}
 }
 
 .experience-wrap {

@@ -14,7 +14,7 @@ import {
 export const Experience = () => {
 	return (
 		<section className={styles.section}>
-			<h2>Experience</h2>
+			<h2>Experienced & Educated</h2>
 			<div className={styles["experience-wrap"]}>
 				<ExperienceCard
 					title="코디(Codee)서비스 MVP 개발"

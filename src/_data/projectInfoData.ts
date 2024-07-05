@@ -3,6 +3,8 @@ import {
 	FigmaSvg,
 	GithubSvg,
 	GoogleDriveSvg,
+	MirrorBoardSvg,
+	NotionSvg,
 } from "../assets";
 import { ProjectInfo_I } from "../_interface/projectInfo_I";
 
@@ -58,6 +60,20 @@ export const projectInfoData: ProjectInfo_I[] = [
 				text: "Figma",
 				url: "https://weniv.link/WHB1CC",
 				svgWidth: 14,
+			},
+			{
+				svg: MirrorBoardSvg,
+				alt: "미로보드 아이콘",
+				text: "기획 미로보드",
+				url: "https://miro.com/app/board/uXjVNM_LZ-k=/?share_link_id=829142086454",
+				svgWidth: 20,
+			},
+			{
+				svg: NotionSvg,
+				alt: "노션 아이콘",
+				text: "API 문서",
+				url: "https://www.notion.so/API-1db717659bc54f4ebceb410edbd9df79?pvs=4",
+				svgWidth: 30,
 			},
 		],
 		stack: [

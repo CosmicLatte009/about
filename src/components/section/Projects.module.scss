@@ -1,15 +1,19 @@
 @import "../../style/index.scss";
 
 .section {
-	margin-top: 9.6538rem;
+	margin-top: 320px;
 
 	h2 {
 		text-align: center;
 	}
+
+	@include mobile-screen {
+		margin-top: 15rem;
+	}
 }
 
 .project-wrap {
-	margin-top: 1.9375rem;
+	margin-top: 7.5rem;
 	@include flex-container(column, center, center);
 }
 
@@ -19,17 +23,25 @@
 	position: relative;
 	width: 1457px;
 	&:not(:last-child) {
-		margin-bottom: 10rem;
+		margin-bottom: 280px;
 	}
 
 	@include tablet-screen {
 		@include flex-container(row, flex-start, center);
 		width: 710px;
+
+		&:not(:last-child) {
+			margin-bottom: 140px;
+		}
 	}
 
 	@include mobile-screen {
 		@include flex-container(row, center, center);
 		width: 400px;
+
+		&:not(:last-child) {
+			margin-bottom: 160px;
+		}
 	}
 }
 .left-wrap,

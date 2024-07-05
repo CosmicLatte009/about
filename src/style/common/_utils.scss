@@ -32,7 +32,7 @@
     ##Screen = 481px에서 767px 사이
     */
 @mixin mobile-screen {
-	@media (min-width: 481px) and (max-width: 767px) {
+	@media (max-width: 767px) {
 		@content;
 	}
 }

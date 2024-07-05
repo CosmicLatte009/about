@@ -2,7 +2,8 @@
 
 .article {
 	@include mobile-screen {
-		wrap: wrap;
+		word-wrap: break-word;
+		text-align: center;
 	}
 }
 
@@ -30,15 +31,26 @@
 		color: $light-text-color;
 		margin-left: 0.5rem;
 	}
+	@include mobile-screen {
+		@include flex-container(row, center, center);
+	}
 }
 
 .link-group {
 	margin: 3.25rem 0 77.5px;
 	@include flex-container(row, flex-start, center);
 	gap: 0.875rem;
+
+	@include mobile-screen {
+		@include flex-container(row, center, center);
+	}
 }
 
 .stack-group {
 	@include flex-container(row, flex-start, center);
 	gap: 0.5313rem;
+
+	@include mobile-screen {
+		@include flex-container(row, center, center);
+	}
 }

@@ -1,8 +1,15 @@
 @import "../../style/index.scss";
 
 .section {
-	margin-top: 9.6538rem;
+	margin-top: 280px;
 	@include flex-container(column, center, center);
+
+	@include tablet-screen {
+		margin-top: 15rem;
+	}
+	@include mobile-screen {
+		margin-top: 15rem;
+	}
 }
 
 .main-wrap {
@@ -48,7 +55,7 @@
 
 	@include mobile-screen {
 		@include flex-container(column, center, center);
-
+		row-gap: 20px;
 		.stack-card-wrap {
 			width: 100%; // 모든 카드를 100% 너비로 설정
 			width: 700px; // 최대 너비 설정
@@ -85,7 +92,7 @@
 	}
 
 	@include mobile-screen {
-		gap: 40px;
+		gap: 10px;
 
 		&.react {
 			@include flex-container(column, center, center);
@@ -105,6 +112,10 @@
 
 	@include mobile-screen {
 		width: 232.72px;
+
+		img {
+			display: none;
+		}
 	}
 }
 

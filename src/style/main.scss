@@ -13,8 +13,21 @@
 }
 
 body {
-	background-color: #ffffff;
-
+	// background-color: #ffffff;
+	background: linear-gradient(
+		to bottom,
+		rgba(148, 226, 191, 0.4),
+		rgba(241, 255, 249, 0.1),
+		#ffffff,
+		#ffffff,
+		#ffffff,
+		#ffffff,
+		#ffffff,
+		#ffffff,
+		#ffffff,
+		rgba(241, 255, 249, 0.1),
+		rgba(148, 226, 191, 0.3)
+	);
 	@include font(400, 16px, 16px);
 	color: $main-text-color;
 
