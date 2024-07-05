@@ -11,6 +11,11 @@
 		margin-top: 100px;
 	}
 }
+.img {
+	@include mobile-screen {
+		width: 240px;
+	}
+}
 
 .main-wrap {
 	margin-top: 5.875rem;

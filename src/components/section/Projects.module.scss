@@ -37,7 +37,7 @@
 
 	@include mobile-screen {
 		@include flex-container(row, center, center);
-		width: 400px;
+		width: fit-content;
 
 		&:not(:last-child) {
 			margin-bottom: 160px;

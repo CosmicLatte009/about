@@ -43,6 +43,7 @@
 
 	@include mobile-screen {
 		@include flex-container(row, center, center);
+		flex-wrap: wrap;
 	}
 }
 
@@ -52,5 +53,6 @@
 
 	@include mobile-screen {
 		@include flex-container(row, center, center);
+		flex-wrap: wrap;
 	}
 }
