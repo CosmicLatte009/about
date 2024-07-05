@@ -5,17 +5,28 @@ import {
 	Projects,
 	Experience,
 } from "./components/section/index";
-import { Contact } from "./components/common";
+import { Contact, Navigation } from "./components/common";
 
 function App() {
 	return (
-		<div style={{ margin: "20px 20px 70px" }}>
-			<AboutMe />
-			<Skills />
-			<Projects />
-			<Experience />
-			<Contact />
-		</div>
+		<>
+			<Navigation />
+			<div style={{ margin: "20px 20px 70px" }}>
+				<div id="aboutMe">
+					<AboutMe />
+				</div>
+				<div id="skills">
+					<Skills />
+				</div>
+				<div id="projects">
+					<Projects />
+				</div>
+				<div id="experience">
+					<Experience />
+				</div>
+				<Contact />
+			</div>
+		</>
 	);
 }
 

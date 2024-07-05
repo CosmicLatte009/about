@@ -1,0 +1,51 @@
+@import "../../style/index.scss";
+
+.nav {
+	& ul {
+		z-index: 1000;
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		left: 50%; // 왼쪽 기준 50% 위치에 요소의 중앙이 오도록
+		transform: translateX(-50%);
+		@include flex-container(row, center, center);
+		@include font(600, 18px);
+		gap: 1.625rem;
+		white-space: nowrap;
+		padding: 16px;
+		background-color: #ffffff;
+		/* From https://css.glass */
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	& li {
+		color: $main-color;
+	}
+	& a {
+		text-decoration: none;
+		padding: 5px;
+		position: relative;
+		&::before {
+			content: ""; // 나타날 내용 또는 아이콘
+			position: absolute;
+			width: 90%; // 요소의 너비
+			height: 16px; // 요소의 높이
+			background-color: $light-color;
+			top: 40%;
+			left: 10%;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+		&:hover {
+			background-color: transparent;
+		}
+		&:hover::before {
+			opacity: 1; // 호버 시 보이게 설정
+		}
+	}
+}
